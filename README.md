@@ -1,1 +1,1 @@
-# DynamicProgramming
+# Dynamic Programming Exercises
