@@ -8,7 +8,7 @@ import time
 
 def recursive_gridTraveller(m, n):
     """
-    Brute-force implementation of 2D. This is *slow*, with time complexity
+    Brute-force implementation. This is *slow*, with time complexity
     O(2^(m+n))
 
     """
@@ -22,7 +22,7 @@ def recursive_gridTraveller(m, n):
 
 def gridTraveller(m, n, memo = {}):
     """
-    Memoised version. This runs in O(m * n)
+    Memoised version. This runs in O(m * n).
     """
     m, n = sorted((m, n))  # (m, n) === (n, m)
     # trivial cases
