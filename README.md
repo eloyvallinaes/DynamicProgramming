@@ -10,24 +10,30 @@ Model use cases of dynamic programming solved in Python. Credits to this
 For memoisation, it seems natural to initialised a `memo` argument with an empty
 dictionary like this:
 
-    def f(x, memo={}):
-        # do something
-        return 
+```python
+def f(x, memo={}):
+    # do something
+    return 
+```
 
 Because of [the way python default arguments work](https://docs.python-guide.org/writing/gotchas/#mutable-default-arguments) this means the contents
 of `memo` are remembered across consecutive calls of `f`. For cases like the fibonacci series, this is indeed an advantage, as `f(x)` depends exclusively on `x` in a mathematical sense.
 
 In a case such as `canSum`, the memoisation key `x` is contextual to another argument `arr`:
 
-    def canSum(x, arr, memo={}):
-        # do something
-        return
+```python
+def canSum(x, arr, memo={}):
+    # do something
+    return
+```
 
 so memoised values should not be kept across function calls. Therefore,
 it is best to initialised `memo` as follows:
 
-    def canSum(x, arr, memo=None):
-        if memo is None:
-            memo = {}
+```python
+def canSum(x, arr, memo=None):
+    if memo is None:
+        memo = {}
+```
 
 which guarantees a clean `memo` for each call.
