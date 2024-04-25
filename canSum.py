@@ -13,8 +13,8 @@ import time
 
 def recursive_canSum(t, arr):
     """
-    Recursive implementation. Time complexity O(t^m), where t is the target sum
-    and m is the lenght of the array.
+    Recursive implementation. Time complexity O(m^t), where t is the target sum
+    and m is len(arr).
     """
     # end cases
     if t in arr: return True
