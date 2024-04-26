@@ -16,7 +16,10 @@ from canSum import timeit
 
 def recursive_bestSum(t, arr):
     """
-    Recursive implementation. Time complexity
+    Recursive implementation. Time complexity: O(m^t * t)
+        Recursive calls: O(m^t) where len(arr) = m
+        List extension: O(k) where len(list) = k
+
     """
     # end cases
     if t == 0: return []
@@ -27,7 +30,7 @@ def recursive_bestSum(t, arr):
         result = recursive_bestSum(t-v, arr)
         if result is not None:
             if  best is None or len(result) <= len(best):
-                best = [v] + result
+                best = [v] + result  # list extension
         
     return best
 
