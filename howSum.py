@@ -8,7 +8,6 @@ target  sum.
 
 """
 
-import time
 from canSum import timeit
 
 
